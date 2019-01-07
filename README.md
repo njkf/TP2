@@ -115,7 +115,7 @@ En executant ipconfig /all, dans le reseau wifi on trouve les informations suiva
 * Bail expirant. . . . . . . . . . . . . : mardi 8 janvier 2019 16:32:00
 
 Pour changer d’adresse ip en ligne commande il faut ouvrir l’invite de commande en mode administrateur et puis entrer:
-netsh interface ipv4 set address name="Wi-Fi" static 192.168.1.8 255.255.255.0 192.168.1.254
+netsh interface ipv4 set address name="Wi-Fi" static 192.168.1.1 255.255.255.0 192.168.1.254
 Dans mon cas, je souhaite dans mon réseau Wi-Fi choisir comme nouvel  ipv4 192.168.1.1 avec 255.255.255.0 en masque de sous-réseau et 192.168.1.254 en passerelle par défaut.
 
 ### DNS
