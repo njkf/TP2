@@ -35,7 +35,7 @@ Pour changer l’adresse IP de la carte wifi, en utilisant l’interface graphiq
 
 #### Nmap
 
-![screen_Nmap](/images/1.png)
+![screen_Nmap](/Images/1.png)
 
 
 #### Modification d’adresse IP – pt.2
@@ -87,21 +87,10 @@ Nous avons réussi à nous connecter à internet par la suite.
 
 ### Petit chat privé
 * PC1 (serveur)
-    nc.exe -l -p 8888
+nc.exe -l -p 8888
 * PC2 (client)
-    nc.exe 172.16.15.22  8888
-       /\_/\
-	  / 0 0 \
-	 ====v====
-	  \  W  /
-	  |     |     _
-	  / _ \    /
-	 / /   \ \  |
-	(((-----)))-'
-	 /
-	(      _
-	 \__.=|___E
-	        /
+nc.exe 172.16.15.22  8888
+
 
 ### ‘firewall’
 Pour pouvoir se ping avec les pare feux activés
@@ -114,10 +103,10 @@ Paref-feu windows, paramètre avancé, nouvelle règle, port, et spécifié dans
 Wire shark 
 Ping :
 
-![screen_Nmap](/images/2.png)  
+![screen_Nmap](/Images/2.png)  
   
 pc1/pc2
-![screen_Nmap](/images/3.png)  
+![screen_Nmap](/Images/3.png)  
   
 Netcat
-![screen_Nmap](/images/4.png)  
+![screen_Nmap](/Images/4.png)  
