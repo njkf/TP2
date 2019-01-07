@@ -56,8 +56,6 @@ Hop
 
 Hop
 
-
----
 ### modification d'adresses IP
 
 On place les 2 réseaux dans le meme masqeu de sous réseau
@@ -87,9 +85,9 @@ Nous avons réussi à nous connecter à internet par la suite.
 
 ### Petit chat privé
 * PC1 (serveur)
-nc.exe -l -p 8888
+`ènc.exe -l -p 8888`
 * PC2 (client)
-nc.exe 172.16.15.22  8888
+`nc.exe 172.16.15.22  8888`
 
 
 ### ‘firewall’
