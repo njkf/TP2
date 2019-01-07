@@ -85,7 +85,7 @@ Nous avons réussi à nous connecter à internet par la suite.
 
 ### Petit chat privé
 * PC1 (serveur)
-`ènc.exe -l -p 8888`
+`nc.exe -l -p 8888`
 * PC2 (client)
 `nc.exe 172.16.15.22  8888`
 
@@ -113,6 +113,7 @@ Netcat
 En executant ipconfig /all, dans le reseau wifi on trouve les informations suivantes :
 * Serveur DHCP . . . . . . . . . . . . . : 192.168.1.254
 * Bail expirant. . . . . . . . . . . . . : mardi 8 janvier 2019 16:32:00
+
 Pour changer d’adresse ip en ligne commande il faut ouvrir l’invite de commande en mode administrateur et puis entrer:
 netsh interface ipv4 set address name="Wi-Fi" static 192.168.1.8 255.255.255.0 192.168.1.254
 Dans mon cas, je souhaite dans mon réseau Wi-Fi choisir comme nouvel  ipv4 192.168.1.8 avec 255.255.255.0 en masque de sous-réseau et 192.168.1.254 en passerelle par défaut.
