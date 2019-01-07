@@ -90,7 +90,7 @@ Nous avons réussi à nous connecter à internet par la suite.
 `nc.exe 172.16.15.22  8888`
 
 
-### ‘firewall’
+### firewall
 Pour pouvoir se ping avec les pare feux activés
 Paref-feu windows, paramètre avancé, règles de traffic entrant/sortant, activer la règle « partage de connexion internet (traffic entrant/sortant DHCPv4) »
 Pour pouvoir communiquer avec netcat avec les pare feux activés sur le Pc serveur.
@@ -98,7 +98,7 @@ Paref-feu windows, paramètre avancé, nouvelle règle, port, et spécifié dans
 
 
 
-Wire shark 
+### Wire shark 
 Ping :
 
 ![screen_Nmap](/Images/2.png)  
@@ -108,3 +108,9 @@ pc1/pc2
   
 Netcat
 ![screen_Nmap](/Images/4.png)  
+
+### firewall
+Pour pouvoir se ping avec les pare feux activés
+Paref-feu windows, paramètre avancé, règles de traffic entrant/sortant, activer la règle « partage de connexion internet (traffic entrant/sortant DHCPv4) »
+Pour pouvoir communiquer avec netcat avec les pare feux activés sur le Pc serveur.
+Paref-feu windows, paramètre avancé, nouvelle règle, port, et spécifié dans « ports locaux spécifiques » 8888, cocher autoriser la connexion, définir le nom et terminer.
