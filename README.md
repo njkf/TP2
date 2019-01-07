@@ -26,6 +26,7 @@ La Gateway est un nœud agissant comme pivot, elle permet de sortir du réseau (
 
 
 ### Modifications des informations
+
 #### Modification d’adresse IP – pt.1	
 
 La première IP du réseau est : 10.33.0.1 et la dernière est : 10.33.3.254 car 10.33.3.255 est l’adresse de broadcast et 10.33.3.253 est l’adresse gateway
@@ -34,8 +35,89 @@ Pour changer l’adresse IP de la carte wifi, en utilisant l’interface graphiq
 
 #### Nmap
 
+![screen_Nmap](/images/1.png)
 
 
 #### Modification d’adresse IP – pt.2
 
+A partir des résultats de la commande Nmap fait précédemment nous savons quelles adresses sont utilisées et nous pouvons donc choisir une adresse inutilisée et appliquer la manip vue au-dessus. 
 
+## Exploration locale en duo
+
+### Prérequis
+
+firewall désactivés
+
+### Cablage
+
+Hop
+
+### ?création du réseau
+
+Hop
+
+
+---
+### modification d'adresses IP
+
+On place les 2 réseaux dans le meme masqeu de sous réseau
+Pour vérifier que les changements d’adresse ip ont fait effets, on tape la commande ipconfig et on regarde les configurations carte ethernet.
+/20 masque sous réseaux : 255.255.240.0
+Envoi d’une requête 'Ping'  172.16.15.1 avec 32 octets de données :
+Réponse de 172.16.15.1 : octets=32 temps=1 ms TTL=128
+Réponse de 172.16.15.1 : octets=32 temps<1ms TTL=128
+Réponse de 172.16.15.1 : octets=32 temps<1ms TTL=128
+Réponse de 172.16.15.1 : octets=32 temps<1ms TTL=128
+/24 masque sous réseaux : 255.255.255.0
+ Envoi d’une requête 'Ping'  172.16.15.1 avec 32 octets de données :
+Réponse de 172.16.15.1 : octets=32 temps=2 ms TTL=128
+Réponse de 172.16.15.1 : octets=32 temps=2 ms TTL=128
+Réponse de 172.16.15.1 : octets=32 temps=2 ms TTL=128
+Réponse de 172.16.15.1 : octets=32 temps<1ms TTL=128
+Pour le plus petit masque de sous réseau on a choisi le /30 (masque : 255.255.255.252) parce qu’après ça marche plus, il n’y a pas assez d’adresse disponible dans le masque réseau.
+
+### Utilisation d'un des 2 comme gateway
+Serveur :
+Aller dans réseau et partage, connexion wifi internet, propriété, partage, cocher « autoriser d’autres utilisateurs du réseau à se connecté via la connexion internet de cet ordinateur », connexion réseau domestique : Ethernet
+Client :
+J’ai rentré l’adresse IP du serveur en tant que passerelle. Et mis en adresse DNS 8.8.8.8 qui est l’adresse du serveur de google. . 
+Pour pouvoir se connecter il fallait entrer 8.8.8.8 en DNS. 
+Nous avons réussi à nous connecter à internet par la suite. 
+
+
+### Petit chat privé
+* PC1 (serveur)
+    nc.exe -l -p 8888
+* PC2 (client)
+    nc.exe 172.16.15.22  8888
+       /\_/\
+	  / 0 0 \
+	 ====v====
+	  \  W  /
+	  |     |     _
+	  / _ \    /
+	 / /   \ \  |
+	(((-----)))-'
+	 /
+	(      _
+	 \__.=|___E
+	        /
+
+### ‘firewall’
+Pour pouvoir se ping avec les pare feux activés
+Paref-feu windows, paramètre avancé, règles de traffic entrant/sortant, activer la règle « partage de connexion internet (traffic entrant/sortant DHCPv4) »
+Pour pouvoir communiquer avec netcat avec les pare feux activés sur le Pc serveur.
+Paref-feu windows, paramètre avancé, nouvelle règle, port, et spécifié dans « ports locaux spécifiques » 8888, cocher autoriser la connexion, définir le nom et terminer.
+
+
+
+Wire shark 
+Ping :
+
+![screen_Nmap](/images/2.png)  
+  
+pc1/pc2
+![screen_Nmap](/images/3.png)  
+  
+Netcat
+![screen_Nmap](/images/4.png)  
