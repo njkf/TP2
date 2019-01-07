@@ -116,7 +116,7 @@ En executant ipconfig /all, dans le reseau wifi on trouve les informations suiva
 
 Pour changer d’adresse ip en ligne commande il faut ouvrir l’invite de commande en mode administrateur et puis entrer:
 netsh interface ipv4 set address name="Wi-Fi" static 192.168.1.8 255.255.255.0 192.168.1.254
-Dans mon cas, je souhaite dans mon réseau Wi-Fi choisir comme nouvel  ipv4 192.168.1.8 avec 255.255.255.0 en masque de sous-réseau et 192.168.1.254 en passerelle par défaut.
+Dans mon cas, je souhaite dans mon réseau Wi-Fi choisir comme nouvel  ipv4 192.168.1.1 avec 255.255.255.0 en masque de sous-réseau et 192.168.1.254 en passerelle par défaut.
 
 ### DNS
 
@@ -124,7 +124,7 @@ En executant ipconfig /all, dans le reseau wifi on trouve les informations suiva
 * Serveurs DNS. . .  . . . . . . . . . . : 192.168.1.254
 
 * nslookup google.com
-C:\Users\Hugo>nslookup google.com
+C:\Users\Moi>nslookup google.com
 Serveur :   bbox.lan
 Address:  192.168.1.254
 
@@ -134,7 +134,7 @@ Addresses:  2a00:1450:4007:805::200e
           216.58.204.142
 
 *nslookup ynov.com
-C:\Users\Hugo>nslookup ynov.com
+C:\Users\Moi>nslookup ynov.com
 Serveur :   bbox.lan
 Address:  192.168.1.254
 
@@ -142,7 +142,7 @@ Réponse ne faisant pas autorité :
 Nom :    ynov.com
 Address:  217.70.184.38
 * reverse lookup 78.78.21.21
-C:\Users\Hugo>nslookup 78.78.21.21
+C:\Users\Moi>nslookup 78.78.21.21
 Serveur :   bbox.lan
 Address:  192.168.1.254
 
@@ -150,7 +150,7 @@ Nom :    host-78-78-21-21.mobileonline.telia.com
 Address:  78.78.21.21
 
 *reverse lookup 96.16.54.88
-C:\Users\Hugo>nslookup 96.16.54.88
+C:\Users\Moi>nslookup 96.16.54.88
 Serveur :   bbox.lan
 Address:  192.168.1.254
 
